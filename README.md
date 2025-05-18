@@ -85,3 +85,8 @@ This template comes with [Tailwind CSS](https://tailwindcss.com/) already config
 ---
 
 Built with ❤️ using React Router.
+
+# 2025-05-18 Challenge
+
+이 프로젝트는 2025년 5월 18일 챌린지 프로젝트입니다.
+# dasi
