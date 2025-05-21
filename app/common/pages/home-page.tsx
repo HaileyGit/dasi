@@ -22,21 +22,19 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#000080] font-mono text-white">
-      {/* 배경 패턴 */}
-      <div className="fixed inset-0 opacity-10 pointer-events-none" style={{
-        backgroundImage: `url("data:image/png;base64,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")`,
-        backgroundRepeat: 'repeat'
-      }} />
-
+    <div className="min-h-screen font-['Pretendard'] text-white">
+      {/* 배경 그라데이션 */}
+      <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-purple-800" />
+      <div className="fixed inset-0 backdrop-blur-3xl opacity-30" />
+      
       {/* 네비게이션 바 */}
-      <nav className="sticky top-0 z-20 bg-black border-b-2 border-white flex items-center justify-between px-4 py-2">
-        <div className="text-lg font-bold tracking-wider" style={{fontFamily: "'MS Gothic', 'Dotum', monospace"}}>
-          <span className="text-yellow-400">★</span> 그날의 기억 <span className="text-yellow-400">★</span>
+      <nav className="sticky top-0 z-20 backdrop-blur-md bg-white/10 border-b border-white/20 flex items-center justify-between px-6 py-3 shadow-lg">
+        <div className="text-lg font-extralight tracking-wider text-shadow">
+          <span className="text-cyan-300 font-light">★</span> 그날의 기억 <span className="text-cyan-300 font-light">★</span>
         </div>
-        <ul className="flex gap-4 text-sm">
+        <ul className="flex gap-6 text-sm">
           {navMenu.map((item, i) => (
-            <li key={i} className="hover:text-yellow-400 cursor-pointer" onClick={item.onClick}>
+            <li key={i} className="hover:text-cyan-300 transition-all duration-300 ease-in-out cursor-pointer hover:scale-105 font-extralight tracking-wide" onClick={item.onClick}>
               {item.label}
             </li>
           ))}
@@ -44,143 +42,155 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center py-12 px-4">
-        <div className="w-full max-w-3xl mx-auto border-2 border-white bg-black p-4">
-          <div className="border-2 border-white p-4">
-            <div className="text-center mb-6">
-              <h1 className="text-3xl font-bold mb-4 text-yellow-400 tracking-wide" style={{fontFamily: "'MS Gothic', 'Dotum', monospace"}}>
-                &gt; 어느 하루, 마음에 남아 있는 그때로
-              </h1>
-              <div className="text-sm text-gray-400">Welcome to the Memory Lane!</div>
-            </div>
-            <div className="flex flex-col items-center gap-6">
-              <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-none border-2 border-white bg-black text-white" />
-              <button className="bg-yellow-400 text-black px-6 py-2 font-bold hover:bg-yellow-300 text-sm">
-                그날로 떠나볼까요?
-              </button>
-            </div>
+      <section className="relative flex flex-col items-center justify-center py-16 px-4">
+        <div className="w-full max-w-3xl mx-auto backdrop-blur-md bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-extralight mb-4 text-cyan-300 tracking-wider text-shadow leading-relaxed">
+              &gt; 어느 하루, 마음에 남아 있는 그때로
+            </h1>
+            <div className="text-sm text-white/60 font-extralight tracking-wide">Welcome to the Memory Lane!</div>
           </div>
-        </div>
-      </section>
-
-      {/* 그날의 기록 예시 */}
-      <section className="max-w-3xl mx-auto my-12 px-4">
-        <div className="border-2 border-white bg-black p-4">
-          <div className="border-2 border-white p-4">
-            <h2 className="text-xl font-bold mb-4 text-yellow-400" style={{fontFamily: "'MS Gothic', 'Dotum', monospace"}}>
-              📝 1995년 4월 15일의 기록
-            </h2>
-            <ul className="mb-6 space-y-2 text-sm">
-              <li>&gt; 하늘은 흐렸고, 바람은 조용했어요</li>
-              <li>&gt; 신문엔 새로운 주민번호 이야기가 실렸죠</li>
-              <li>&gt; 거리마다 울려 퍼지던 노래: <span className="text-yellow-400">서태지와 아이들 - Come Back Home</span></li>
-              <li>&gt; TV 속에선 전원일기와 토토즐이 흘러나왔어요</li>
-            </ul>
-            <button className="bg-yellow-400 text-black px-4 py-1 font-bold hover:bg-yellow-300 text-sm">
-              이 날로 회상해볼래요
+          <div className="flex flex-col items-center gap-8">
+            <Calendar 
+              mode="single" 
+              selected={date} 
+              onSelect={setDate} 
+              className="rounded-xl border border-white/20 bg-white/10 backdrop-blur-md shadow-lg hover:shadow-xl transition-all duration-300" 
+            />
+            <button className="bg-cyan-300/20 hover:bg-cyan-300/30 text-cyan-300 px-8 py-3 font-extralight rounded-xl transition-all duration-300 ease-in-out text-sm backdrop-blur-md border border-cyan-300/30 shadow-md hover:shadow-lg hover:scale-105 tracking-wide">
+              그날로 떠나볼까요?
             </button>
           </div>
         </div>
       </section>
 
+      {/* 그날의 기록 예시 */}
+      <section className="max-w-3xl mx-auto my-16 px-4">
+        <div className="backdrop-blur-md bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out">
+          <h2 className="text-2xl font-extralight mb-6 text-cyan-300 text-shadow tracking-wide">
+            <span className="animate-float inline-block">📝</span> 1995년 4월 15일의 기록
+          </h2>
+          <ul className="mb-8 space-y-3 text-sm leading-relaxed">
+            <li className="hover:text-cyan-300 transition-colors duration-300 font-extralight tracking-wide">&gt; 하늘은 흐렸고, 바람은 조용했어요</li>
+            <li className="hover:text-cyan-300 transition-colors duration-300 font-extralight tracking-wide">&gt; 신문엔 새로운 주민번호 이야기가 실렸죠</li>
+            <li className="hover:text-cyan-300 transition-colors duration-300 font-extralight tracking-wide">&gt; 거리마다 울려 퍼지던 노래: <span className="text-cyan-300 font-light">서태지와 아이들 - Come Back Home</span></li>
+            <li className="hover:text-cyan-300 transition-colors duration-300 font-extralight tracking-wide">&gt; TV 속에선 전원일기와 토토즐이 흘러나왔어요</li>
+          </ul>
+          <button className="bg-cyan-300/20 hover:bg-cyan-300/30 text-cyan-300 px-6 py-2 font-extralight rounded-xl transition-all duration-300 ease-in-out text-sm backdrop-blur-md border border-cyan-300/30 shadow-md hover:shadow-lg hover:scale-105 tracking-wide">
+            이 날로 회상해볼래요
+          </button>
+        </div>
+      </section>
+
       {/* 회상 저장 예시/공유 UI */}
-      <section className="max-w-3xl mx-auto my-12 px-4">
-        <div className="border-2 border-white bg-black p-4">
-          <div className="border-2 border-white p-4">
-            <h3 className="text-xl font-bold mb-4 text-yellow-400" style={{fontFamily: "'MS Gothic', 'Dotum', monospace"}}>
-              💾 회상 저장하기
-            </h3>
-            <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="flex-1">
-                <div className="flex gap-2 mb-4">
-                  <span className="bg-yellow-400 text-black px-2 py-1 text-xs font-bold">그리움</span>
-                  <span className="bg-yellow-400 text-black px-2 py-1 text-xs font-bold">행복</span>
-                  <span className="bg-yellow-400 text-black px-2 py-1 text-xs font-bold">먹먹함</span>
-                </div>
-                <div className="text-sm mb-4">&gt; 이 날 할머니랑 시장 갔었지</div>
-                <button className="bg-yellow-400 text-black px-4 py-1 font-bold hover:bg-yellow-300 text-sm">
-                  친구에게 조심스레 건네기
-                </button>
+      <section className="max-w-3xl mx-auto my-16 px-4">
+        <div className="backdrop-blur-md bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out">
+          <h3 className="text-2xl font-extralight mb-6 text-cyan-300 text-shadow tracking-wide">
+            <span className="animate-float inline-block">💾</span> 회상 저장하기
+          </h3>
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <div className="flex gap-3 mb-6">
+                <span className="bg-cyan-300/20 text-cyan-300 px-4 py-2 text-xs font-extralight rounded-full backdrop-blur-md border border-cyan-300/30 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 tracking-wide">그리움</span>
+                <span className="bg-cyan-300/20 text-cyan-300 px-4 py-2 text-xs font-extralight rounded-full backdrop-blur-md border border-cyan-300/30 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 tracking-wide">행복</span>
+                <span className="bg-cyan-300/20 text-cyan-300 px-4 py-2 text-xs font-extralight rounded-full backdrop-blur-md border border-cyan-300/30 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 tracking-wide">먹먹함</span>
               </div>
-              <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80" alt="회상 캡처 예시" className="w-32 h-32 object-cover border-2 border-white" />
+              <div className="text-sm mb-6 leading-relaxed font-extralight tracking-wide">&gt; 이 날 할머니랑 시장 갔었지</div>
+              <button className="bg-cyan-300/20 hover:bg-cyan-300/30 text-cyan-300 px-6 py-2 font-extralight rounded-xl transition-all duration-300 ease-in-out text-sm backdrop-blur-md border border-cyan-300/30 shadow-md hover:shadow-lg hover:scale-105 tracking-wide">
+                친구에게 조심스레 건네기
+              </button>
             </div>
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80" alt="회상 캡처 예시" className="w-40 h-40 object-cover rounded-xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" />
           </div>
         </div>
       </section>
 
       {/* 사용자 후일담 */}
-      <section className="max-w-4xl mx-auto my-12 px-4">
-        <div className="border-2 border-white bg-black p-4">
-          <div className="border-2 border-white p-4">
-            <h3 className="text-xl font-bold mb-4 text-yellow-400" style={{fontFamily: "'MS Gothic', 'Dotum', monospace"}}>
-              👥 누군가의 회상
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="border border-white p-4 text-sm">
-                <div className="mb-2">&gt; "사진 한 장이, 그날의 냄새와 소리까지 떠오르게 했어요."</div>
-                <div className="text-xs text-gray-400">1993년 6월 22일 - 향수</div>
-              </div>
-              <div className="border border-white p-4 text-sm">
-                <div className="mb-2">&gt; "소풍 전날 밤, 설렘에 잠 못 이루던 감정이 다시 찾아왔어요."</div>
-                <div className="text-xs text-gray-400">1997년 5월 3일 - 행복</div>
-              </div>
-              <div className="border border-white p-4 text-sm">
-                <div className="mb-2">&gt; "오랜만에 가족이 함께 웃던 저녁 식탁이 생각났어요."</div>
-                <div className="text-xs text-gray-400">1990년 10월 12일 - 그리움</div>
-              </div>
+      <section className="max-w-4xl mx-auto my-16 px-4">
+        <div className="backdrop-blur-md bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out">
+          <h3 className="text-2xl font-extralight mb-6 text-cyan-300 text-shadow tracking-wide">
+            <span className="animate-float inline-block">👥</span> 누군가의 회상
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="backdrop-blur-md bg-white/10 rounded-xl p-6 text-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="mb-3 leading-relaxed font-extralight tracking-wide">&gt; "사진 한 장이, 그날의 냄새와 소리까지 떠오르게 했어요."</div>
+              <div className="text-xs text-white/60 font-extralight">1993년 6월 22일 - 향수</div>
+            </div>
+            <div className="backdrop-blur-md bg-white/10 rounded-xl p-6 text-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="mb-3 leading-relaxed font-extralight tracking-wide">&gt; "소풍 전날 밤, 설렘에 잠 못 이루던 감정이 다시 찾아왔어요."</div>
+              <div className="text-xs text-white/60 font-extralight">1997년 5월 3일 - 행복</div>
+            </div>
+            <div className="backdrop-blur-md bg-white/10 rounded-xl p-6 text-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="mb-3 leading-relaxed font-extralight tracking-wide">&gt; "오랜만에 가족이 함께 웃던 저녁 식탁이 생각났어요."</div>
+              <div className="text-xs text-white/60 font-extralight">1990년 10월 12일 - 그리움</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 프리미엄 회상 기능 */}
-      <section className="max-w-3xl mx-auto my-12 px-4">
-        <div className="border-2 border-white bg-black p-4">
-          <div className="border-2 border-white p-4">
-            <h3 className="text-xl font-bold mb-4 text-yellow-400" style={{fontFamily: "'MS Gothic', 'Dotum', monospace"}}>
-              💎 프리미엄 회상
-            </h3>
-            <ul className="list-disc pl-4 mb-6 space-y-2 text-sm">
-              <li>AI가 당신의 나이, 그 날의 위치, 시간까지 고려해 당시의 하루를 정성스럽게 되살려드려요.</li>
-              <li>예: "1998년 5월 4일, 당신은 10살. 운동장에서 친구들과 비 맞으며 놀다 집에 돌아왔죠."</li>
-            </ul>
-            <div className="flex gap-4">
-              <div className="flex-1 border border-white p-4 text-center">
-                <div className="font-bold text-yellow-400 mb-2 text-sm">무료</div>
-                <div className="text-xs mb-4">기본 회상, 저장</div>
-                <button className="bg-yellow-400 text-black px-4 py-1 font-bold hover:bg-yellow-300 text-sm">
-                  무료로 시작
-                </button>
-              </div>
-              <div className="flex-1 border border-white p-4 text-center bg-yellow-400">
-                <div className="font-bold text-black mb-2 text-sm">유료</div>
-                <div className="text-xs mb-4 text-black">AI 회상 + 정밀 뉴스/방송 기록 + 감정 분석 리포트</div>
-                <button className="bg-black text-yellow-400 px-4 py-1 font-bold hover:bg-gray-800 text-sm">
-                  구독하고 더 깊이 회상
-                </button>
-              </div>
+      <section className="max-w-3xl mx-auto my-16 px-4">
+        <div className="backdrop-blur-md bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out">
+          <h3 className="text-2xl font-extralight mb-6 text-cyan-300 text-shadow tracking-wide">
+            <span className="animate-float inline-block">💎</span> 프리미엄 회상
+          </h3>
+          <ul className="list-disc pl-4 mb-8 space-y-3 text-sm leading-relaxed">
+            <li className="font-extralight tracking-wide">AI가 당신의 나이, 그 날의 위치, 시간까지 고려해 당시의 하루를 정성스럽게 되살려드려요.</li>
+            <li className="font-extralight tracking-wide">예: "1998년 5월 4일, 당신은 10살. 운동장에서 친구들과 비 맞으며 놀다 집에 돌아왔죠."</li>
+          </ul>
+          <div className="flex gap-6">
+            <div className="flex-1 backdrop-blur-md bg-white/10 rounded-xl p-6 text-center border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="font-extralight text-cyan-300 mb-3 text-sm tracking-wide">무료</div>
+              <div className="text-xs mb-6 text-white/60 font-extralight">기본 회상, 저장</div>
+              <button className="bg-cyan-300/20 hover:bg-cyan-300/30 text-cyan-300 px-6 py-2 font-extralight rounded-xl transition-all duration-300 ease-in-out text-sm backdrop-blur-md border border-cyan-300/30 shadow-md hover:shadow-lg hover:scale-105 tracking-wide">
+                무료로 시작
+              </button>
+            </div>
+            <div className="flex-1 backdrop-blur-md bg-cyan-300/20 rounded-xl p-6 text-center border border-cyan-300/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="font-extralight text-cyan-300 mb-3 text-sm tracking-wide">유료</div>
+              <div className="text-xs mb-6 text-white/60 font-extralight">AI 회상 + 정밀 뉴스/방송 기록 + 감정 분석 리포트</div>
+              <button className="bg-cyan-300/30 hover:bg-cyan-300/40 text-cyan-300 px-6 py-2 font-extralight rounded-xl transition-all duration-300 ease-in-out text-sm backdrop-blur-md border border-cyan-300/30 shadow-md hover:shadow-lg hover:scale-105 tracking-wide">
+                구독하고 더 깊이 회상
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-black py-8 mt-12 text-center text-white border-t-2 border-white">
-        <div className="mb-4 flex flex-wrap justify-center gap-4 text-sm">
-          <a href="#" className="hover:text-yellow-400">회사 소개</a>
-          <a href="#" className="hover:text-yellow-400">이용약관</a>
-          <a href="#" className="hover:text-yellow-400">개인정보 처리방침</a>
-          <a href="#" className="hover:text-yellow-400">문의하기</a>
+      <footer className="backdrop-blur-md bg-white/10 py-12 mt-16 text-center text-white border-t border-white/20">
+        <div className="mb-6 flex flex-wrap justify-center gap-6 text-sm">
+          <a href="#" className="hover:text-cyan-300 transition-all duration-300 hover:scale-105 font-extralight tracking-wide">회사 소개</a>
+          <a href="#" className="hover:text-cyan-300 transition-all duration-300 hover:scale-105 font-extralight tracking-wide">이용약관</a>
+          <a href="#" className="hover:text-cyan-300 transition-all duration-300 hover:scale-105 font-extralight tracking-wide">개인정보 처리방침</a>
+          <a href="#" className="hover:text-cyan-300 transition-all duration-300 hover:scale-105 font-extralight tracking-wide">문의하기</a>
         </div>
-        <div className="mb-4 flex justify-center gap-4">
-          <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" /></a>
-          <a href="#" aria-label="YouTube"><img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png" alt="YouTube" /></a>
-          <a href="#" aria-label="Kakao"><img src="https://img.icons8.com/ios-filled/24/ffffff/speech-bubble.png" alt="Kakao" /></a>
+        <div className="mb-6 flex justify-center gap-6">
+          <a href="#" aria-label="Instagram" className="hover:scale-110 transition-transform duration-300"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" /></a>
+          <a href="#" aria-label="YouTube" className="hover:scale-110 transition-transform duration-300"><img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png" alt="YouTube" /></a>
+          <a href="#" aria-label="Kakao" className="hover:scale-110 transition-transform duration-300"><img src="https://img.icons8.com/ios-filled/24/ffffff/speech-bubble.png" alt="Kakao" /></a>
         </div>
-        <div className="text-sm font-bold" style={{fontFamily: "'MS Gothic', 'Dotum', monospace"}}>
+        <div className="text-sm font-extralight text-cyan-300 text-shadow tracking-wide">
           &gt; "기억은 사라지지 않아요. 다시 꺼낼 수 있을 뿐이죠."
         </div>
       </footer>
+
+      <style>{`
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0px); }
+        }
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+        .text-shadow {
+          text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+        }
+        .backdrop-blur-md {
+          transition: all 0.3s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 }
