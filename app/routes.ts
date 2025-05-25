@@ -11,6 +11,10 @@ export default [
   route("/login", "common/pages/login-page.tsx"),
   route("/signup", "common/pages/signup-page.tsx"),
 
+  route("/about", "features/about/pages/about-page.tsx"),
+  route("/examples", "features/examples/pages/examples-page.tsx"),
+
+  route("/explore", "features/memory/pages/explore-page.tsx"),
   route("/explore/:date", "features/memory/pages/explore-page.tsx"),
 
   route("/edit/:date", "features/memory/pages/edit-memory-page.tsx"),
