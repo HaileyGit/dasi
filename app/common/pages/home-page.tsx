@@ -3,6 +3,7 @@ import { Card, CardHeader, CardContent } from "~/common/components/ui/card";
 import { Calendar } from "~/common/components/ui/calendar";
 import { useState } from "react";
 import CosmicBackgroundLayout from "~/common/components/layouts/CosmicBackgroundLayout";
+import "~/common/components/ui/heroStyles.css";
 
 export default function HomePage() {
   const [date, setDate] = useState<Date | undefined>(undefined);
@@ -95,78 +96,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Marcellus:wght@400;700&display=swap');
-          .hero-card-memecho {
-            background: radial-gradient(ellipse at 60% 0%, #4b357a 0%, #2d1e4d 80%, #1a1333 100%);
-            border-radius: 2.5rem;
-            box-shadow: 0 8px 40px 0 #0008, 0 0 0 2px #a389f4cc, 0 0 32px 8px #c084fc44;
-            padding: 3.5rem 2.5rem 2.5rem 2.5rem;
-            border: 2px solid #a389f4cc;
-            position: relative;
-            overflow: hidden;
-          }
-          .hero-memecho-title {
-            font-family: 'Marcellus', serif;
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.04em;
-            text-shadow: 0 0 16px #fff8, 0 2px 24px #c084fc, 0 0 8px #fff8;
-          }
-          .hero-memecho-white {
-            color: #fff;
-            text-shadow: 0 0 16px #fff, 0 2px 24px #c084fc, 0 0 8px #fff8;
-          }
-          .hero-memecho-pink {
-            color: #e0aaff;
-            text-shadow: 0 0 24px #e0aaff, 0 0 32px #ffb6ff, 0 2px 24px #c084fc, 0 0 8px #fff8;
-          }
-          .hero-memecho-desc {
-            color: #e6e6f0;
-            text-shadow: 0 0 8px #fff4, 0 0 16px #a389f444;
-          }
-          .hero-memecho-btn-pink {
-            background: #c084fc;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border-radius: 1.5rem;
-            padding: 0.8rem 2.2rem;
-            box-shadow: 0 2px 16px #c084fc88, 0 0 0 2px #fff8;
-            border: 2px solid #fff8;
-            transition: all 0.2s;
-          }
-          .hero-memecho-btn-pink:hover {
-            background: #e0aaff;
-            color: #4b357a;
-            box-shadow: 0 4px 32px #e0aaffcc, 0 0 0 2px #fff8;
-            border-color: #fff;
-          }
-          .hero-memecho-btn-outline {
-            background: transparent;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border-radius: 1.5rem;
-            padding: 0.8rem 2.2rem;
-            border: 2px solid #fff8;
-            box-shadow: 0 2px 16px #fff4, 0 0 0 2px #fff8;
-            transition: all 0.2s;
-          }
-          .hero-memecho-btn-outline:hover {
-            background: #fff2;
-            color: #e0aaff;
-            border-color: #e0aaff;
-            box-shadow: 0 4px 32px #e0aaff88, 0 0 0 2px #e0aaff;
-          }
-          .hero-memecho-noise {
-            background-image: url('https://grainy-gradients.vercel.app/noise.svg');
-            opacity: 0.18;
-            mix-blend-mode: screen;
-            z-index: 2;
-          }
-        `}</style>
       </section>
 
       {/* 달력과 회상 저장 섹션 */}
@@ -497,46 +426,6 @@ export default function HomePage() {
           &gt; "기억은 사라지지 않아요. 다시 꺼낼 수 있을 뿐이죠."
         </div>
       </footer>
-      <style>{`
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-          100% { transform: translateY(0px); }
-        }
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-        .text-shadow {
-          text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
-        }
-        .text-shadow-strong {
-          text-shadow: 0 2px 12px #0008, 0 0 2px #fff, 0 0 8px #f3cfff99;
-        }
-        .backdrop-blur-md {
-          transition: all 0.3s ease-in-out;
-        }
-        .grain-bg {
-          background-image: url('https://grainy-gradients.vercel.app/noise.svg');
-          opacity: 0.25;
-          mix-blend-mode: screen;
-        }
-        .hero-serif-title {
-          text-shadow: 0 4px 32px #ffb86b99, 0 0 8px #fff8;
-        }
-        .glass-card {
-          background: rgba(255, 255, 255, 0.07);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          border-radius: 1.5rem;
-          backdrop-filter: blur(14px);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-          padding: 2rem;
-          transition: all 0.3s ease;
-        }
-        .glass-card:hover {
-          background: rgba(255, 255, 255, 0.1);
-          box-shadow: 0 6px 40px rgba(255, 182, 255, 0.3);
-        }
-      `}</style>
     </CosmicBackgroundLayout>
   );
 }
