@@ -25,69 +25,75 @@ export default function HomePage() {
   return (
     <CosmicBackgroundLayout>
       {/* 네비게이션 바 */}
-      <nav
-        className="sticky top-0 z-30 flex items-center justify-between px-6 py-3 transition-all duration-500 ease-in-out"
-        style={{
-          background: "rgba(255, 255, 255, 0.06)",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.3)",
-          backdropFilter: "blur(16px)",
-          WebkitBackdropFilter: "blur(16px)",
-          boxShadow: "0 8px 40px rgba(255, 182, 255, 0.2)",
-        }}
-      >
-        <div className="text-lg font-extralight tracking-wider text-shadow-strong">
-          그날의 기억
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10 shadow-lg">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center">
+            <div className="text-2xl font-bold mr-2">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-300 to-purple-300">
+                그날의 기억
+              </span>
+            </div>
+          </div>
+          <ul className="flex gap-6 text-sm">
+            {navMenu.map((item, i) => (
+              <li
+                key={i}
+                className="hover:text-pink-300 text-white/80 transition-all duration-300 ease-in-out cursor-pointer hover:scale-105 font-extralight tracking-wide"
+                onClick={() => (window.location.href = item.href)}
+              >
+                {item.title}
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center space-x-4">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="기억 검색..."
+                className="bg-white/10 border-none text-sm rounded-full py-2 pl-10 pr-4 w-40 md:w-64 focus:outline-none focus:ring-2 focus:ring-pink-400/50 backdrop-blur-sm transition-all"
+              />
+              <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 text-sm"></i>
+            </div>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center cursor-pointer shadow-lg">
+              <i className="fas fa-user text-white"></i>
+            </div>
+          </div>
         </div>
-        <ul className="flex gap-6 text-sm">
-          {navMenu.map((item, i) => (
-            <li
-              key={i}
-              className="hover:text-fuchsia-400 text-white transition-all duration-300 ease-in-out cursor-pointer hover:scale-105 font-extralight tracking-wide text-shadow-strong"
-              onClick={() => (window.location.href = item.href)}
-            >
-              {item.title}
-            </li>
-          ))}
-        </ul>
       </nav>
 
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center min-h-[340px] md:min-h-[400px] px-4 z-40 mt-8">
-        <div className="hero-card-memecho w-full max-w-2xl mx-auto flex flex-col items-start relative overflow-hidden">
-          {/* Hero 텍스트 */}
-          <h1
-            lang="en"
-            className="text-[2.7rem] md:text-[3.5rem] font-serif font-bold mb-4 tracking-tight hero-memecho-title"
-          >
-            <span className="hero-memecho-white">Relive Your </span>
-            <span className="hero-memecho-pink">Nostalgic</span>
-            <span className="hero-memecho-white"> Moments</span>
-          </h1>
-          <div className="text-lg md:text-xl font-light text-[#e6e6f0] mb-6 tracking-wide max-w-xl hero-memecho-desc">
-            Journey back through time with our immersive memory recall
-            experience. Rediscover the sights, sounds, and feelings of your
-            past.
+        <div className="relative mb-12 rounded-2xl overflow-hidden w-full max-w-4xl">
+          <div className="absolute inset-0 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=A%20nostalgic%20cosmic%20dreamscape%20with%20floating%20memory%20bubbles%2C%20showing%20fragments%20of%2090s%20life%20with%20vintage%20TVs%2C%20cassette%20tapes%2C%20and%20old%20photographs.%20Deep%20purple%20and%20blue%20nebula%20background%20with%20soft%20pink%20accents%20and%20glowing%20particles.%20Ethereal%2C%20emotional%2C%20dreamy%20atmosphere%20with%20a%20sense%20of%20time%20passing.&width=1200&height=400&seq=hero-bg-1&orientation=landscape"
+              alt="Nostalgic memories"
+              className="w-full h-full object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#2A0944]/90 via-[#2A0944]/70 to-transparent"></div>
           </div>
-          {/* 날짜 선택 안내문구 */}
-          <div className="mb-4 text-base text-fuchsia-200/80 font-light">
-            날짜를 선택하세요
+          <div className="relative z-10 flex flex-col md:flex-row items-center py-12 md:py-16 px-6 md:px-8">
+            <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 leading-tight">
+                그날의{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-300 to-purple-300">
+                  기억을 되살리다
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-white/80 mb-4 md:mb-6 max-w-md mx-auto md:mx-0">
+                시간을 거슬러 올라가 그날의 순간들을 다시 만나보세요. 잊고 있던
+                그날의 풍경, 소리, 그리고 감정들이 당신을 기다리고 있어요.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
+                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-medium shadow-lg hover:shadow-pink-500/20 transition-all duration-300">
+                  회상 기록하기
+                </button>
+                <button className="bg-white/10 backdrop-blur-sm text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-medium hover:bg-white/20 transition-all duration-300">
+                  타임라인 둘러보기
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-4 mb-2">
-            <button
-              className="hero-memecho-btn-pink"
-              onClick={() => alert("아직 구현되지 않았어요!")}
-            >
-              Create Memory
-            </button>
-            <button
-              className="hero-memecho-btn-outline"
-              onClick={() => alert("타임라인 기능 준비중!")}
-            >
-              Explore Timeline
-            </button>
-          </div>
-          {/* 노이즈 오버레이 */}
-          <div className="absolute inset-0 pointer-events-none rounded-[2.5rem] hero-memecho-noise" />
         </div>
         {/* Calendar 실제 렌더링 */}
         <Calendar

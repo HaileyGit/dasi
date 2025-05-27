@@ -28,9 +28,9 @@ export default function CosmicBackgroundLayout({
         .cosmic-radial-bg {
           background: radial-gradient(
             ellipse at 60% 0%,
-            #32295a 0%,
-            #2d2346 60%,
-            #1a1333 100%
+            #2A0944 0%,
+            #0B0B45 60%,
+            #2A0944 100%
           );
         }
         .grain-bg {
