@@ -5,18 +5,11 @@ import DateSaveSection from "~/features/home/components/DateSaveSection";
 import PremiumSection from "~/features/home/components/PremiumSection";
 import Navigation from "~/common/components/navigation";
 
-// 메뉴 아이템 타입 정의
-type MenuItem = {
-  title: string;
-  href?: string;
-  onClick?: () => void;
-};
-
 export default function HomePage() {
   return (
     <CosmicBackgroundLayout>
       <div className="min-h-screen">
-        <Navigation />
+        <Navigation isLoggedIn={true} />
 
         {/* 메인 컨텐츠 */}
         <main className="pt-16">
