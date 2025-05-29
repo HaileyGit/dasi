@@ -3,6 +3,7 @@ import CosmicBackgroundLayout from "~/common/components/layouts/CosmicBackground
 import HeroSection from "~/features/home/components/HeroSection";
 import DateSaveSection from "~/features/home/components/DateSaveSection";
 import PremiumSection from "~/features/home/components/PremiumSection";
+import Navigation from "~/common/components/navigation";
 
 // 메뉴 아이템 타입 정의
 type MenuItem = {
@@ -12,48 +13,10 @@ type MenuItem = {
 };
 
 export default function HomePage() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const guestMenu: MenuItem[] = [
-    { title: "서비스 소개", href: "/about" },
-    { title: "회상 예시 보기", href: "/examples" },
-    { title: "로그인 / 회원가입", href: "/login" },
-  ];
-
-  const userMenu: MenuItem[] = [
-    { title: "서비스 소개", href: "/about" },
-    { title: "날짜로 회상하기", href: "/recall" },
-    { title: "내 기록 보기", href: "/my-records" },
-    { title: "로그아웃", onClick: () => setIsLoggedIn(false) },
-  ];
-
   return (
     <CosmicBackgroundLayout>
       <div className="min-h-screen">
-        {/* 네비게이션 바 */}
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex items-center">
-                <a href="/" className="text-xl font-bold text-white">
-                  DASI
-                </a>
-              </div>
-              <div className="flex items-center space-x-8">
-                {(isLoggedIn ? userMenu : guestMenu).map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.href}
-                    onClick={item.onClick}
-                    className="text-white/80 hover:text-white transition-colors"
-                  >
-                    {item.title}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </nav>
+        <Navigation />
 
         {/* 메인 컨텐츠 */}
         <main className="pt-16">
