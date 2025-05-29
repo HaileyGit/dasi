@@ -1,56 +1,50 @@
-import { type FC } from "react";
 import { Button } from "~/common/components/ui/button";
-import { Link } from "react-router";
+import { Input } from "~/common/components/ui/input";
+import AuthLayout from "../components/auth-layout";
 
-const LoginPage: FC = () => {
+export default function LoginPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-md mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-center">로그인</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <form className="space-y-4">
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                이메일
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="your@email.com"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                비밀번호
-              </label>
-              <input
-                type="password"
-                id="password"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="••••••••"
-              />
-            </div>
-            <Button type="submit" className="w-full">
-              로그인
-            </Button>
-          </form>
-          <div className="mt-4 text-center text-sm text-gray-600">
-            계정이 없으신가요?{" "}
-            <Link to="/auth/join" className="text-blue-600 hover:underline">
-              회원가입
-            </Link>
-          </div>
+    <AuthLayout
+      title="로그인"
+      footer={
+        <>
+          <Button className="w-full bg-fuchsia-400/20 hover:bg-fuchsia-400/30 text-white rounded-xl shadow-md text-shadow-strong">
+            로그인
+          </Button>
+          <Button
+            variant="outline"
+            className="w-full border-fuchsia-400/30 text-white rounded-xl"
+            onClick={() => (window.location.href = "/auth/join")}
+          >
+            회원가입
+          </Button>
+        </>
+      }
+    >
+      <form className="space-y-4">
+        <div className="space-y-2">
+          <label htmlFor="email" className="text-white/80">
+            이메일
+          </label>
+          <Input
+            id="email"
+            type="email"
+            placeholder="이메일을 입력하세요"
+            className="bg-white/10 border border-fuchsia-400/30 rounded-xl text-white placeholder:text-white/40"
+          />
         </div>
-      </div>
-    </div>
+        <div className="space-y-2">
+          <label htmlFor="password" className="text-white/80">
+            비밀번호
+          </label>
+          <Input
+            id="password"
+            type="password"
+            placeholder="비밀번호를 입력하세요"
+            className="bg-white/10 border border-fuchsia-400/30 rounded-xl text-white placeholder:text-white/40"
+          />
+        </div>
+      </form>
+    </AuthLayout>
   );
-};
-
-export default LoginPage;
+}

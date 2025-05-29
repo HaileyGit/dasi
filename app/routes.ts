@@ -33,14 +33,14 @@ export default [
   // 서비스 소개
   route("/about", "features/common/pages/about-page.tsx"),
 
-  route("/explore/:date?", "features/memory/pages/explore-page.tsx"),
+  // 메모리 관련
+  ...prefix("memory", [
+    route("/explore/:date?", "features/memory/pages/explore-page.tsx"),
+    route("/edit/:date", "features/memory/pages/edit-memory-page.tsx"),
+    route("/list", "features/memory/pages/memory-list-page.tsx"),
+    route("/:id", "features/memory/pages/memory-detail-page.tsx"),
+  ]),
 
-  route("/edit/:date", "features/memory/pages/edit-memory-page.tsx"),
-
-  route("/memories", "features/memory/pages/memory-list-page.tsx"),
-  route("/memories/:id", "features/memory/pages/memory-detail-page.tsx"),
-
-  route("/signup", "common/pages/signup-page.tsx"),
-
+  // 404
   route("*", "common/pages/not-found-page.tsx"),
 ] satisfies RouteConfig;

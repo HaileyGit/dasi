@@ -2,9 +2,10 @@ import { Link } from "react-router";
 
 export default function Footer() {
   return (
-    <footer className="mt-20 bg-[#0f0f1f] text-white border-t border-white/10 px-6 py-12 text-sm">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between gap-8">
-        <div className="space-y-2">
+    <footer className="bg-[#0f0f1f] text-white border-t border-white/10 px-6 py-16 text-sm">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* 좌측 */}
+        <div className="space-y-3">
           <h2 className="text-lg font-semibold">DASI 감정 회상 서비스</h2>
           <p className="text-white/60">
             기억은 사라지지 않아요. 다시 꺼낼 수 있을 뿐이죠.
@@ -12,7 +13,8 @@ export default function Footer() {
           <p className="text-white/40">© 2025 DASI. All rights reserved.</p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+        {/* 우측 */}
+        <div className="grid grid-cols-3 gap-8">
           <div className="space-y-2">
             <h3 className="font-semibold">서비스</h3>
             <ul className="space-y-1">
@@ -33,7 +35,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           <div className="space-y-2">
             <h3 className="font-semibold">내 활동</h3>
             <ul className="space-y-1">
@@ -52,7 +53,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           <div className="space-y-2">
             <h3 className="font-semibold">지원</h3>
             <ul className="space-y-1">
