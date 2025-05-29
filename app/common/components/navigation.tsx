@@ -54,7 +54,15 @@ const userMenus = [
   },
 ];
 
-export default function Navigation({ isLoggedIn }: { isLoggedIn: boolean }) {
+export default function Navigation({
+  isLoggedIn,
+  hasNotifications = false,
+  hasMessages = false,
+}: {
+  isLoggedIn: boolean;
+  hasNotifications?: boolean;
+  hasMessages?: boolean;
+}) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const menus = [...commonMenus, ...(isLoggedIn ? userMenus : guestMenus)];
