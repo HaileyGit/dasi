@@ -24,22 +24,27 @@ const RecallPage: FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">회상하기</h1>
-      <div className="bg-white rounded-lg shadow p-6">
-        <p className="text-gray-600 mb-4">회상하고 싶은 날짜를 선택해주세요.</p>
+    <div className="max-w-md mx-auto px-6 py-16 space-y-8">
+      <h1 className="text-3xl font-bold text-center text-primary drop-shadow-md">
+        회상하기
+      </h1>
+
+      <div className="bg-white/5 backdrop-blur-lg text-white border border-white/10 rounded-2xl p-6 shadow-xl transition-all hover:shadow-white/10">
+        <p className="text-sm text-white/70 mb-4 text-center">
+          회상하고 싶은 날짜를 선택해주세요.
+        </p>
         <div className="flex flex-col items-center gap-6">
           <Calendar
             mode="single"
             selected={date}
             onSelect={handleDateSelect}
             locale={ko}
-            className="rounded-md border"
+            className="rounded-md border border-white/10"
           />
           <Button
             onClick={handleSubmit}
             disabled={!date}
-            className="w-full max-w-xs"
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
           >
             선택한 날짜로 회상하기
           </Button>

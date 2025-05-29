@@ -11,6 +11,7 @@ import stylesheet from "./app.css?url";
 import Navigation from "./common/components/navigation";
 import Footer from "./common/components/layouts/footer";
 import { Settings } from "luxon";
+import CosmicBackgroundLayout from "./common/components/layouts/CosmicBackgroundLayout";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -49,7 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   // TODO: 실제 전역 상태 (예: authStore)로 대체
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   const hasNotifications = false;
   const hasMessages = false;
 
@@ -62,7 +63,9 @@ export default function App() {
         hasMessages={hasMessages}
       />
       <main className="pt-28 px-4 sm:px-8 lg:px-16">
-        <Outlet />
+        <CosmicBackgroundLayout>
+          <Outlet />
+        </CosmicBackgroundLayout>
       </main>
       <Footer />
     </>

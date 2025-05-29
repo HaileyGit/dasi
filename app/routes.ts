@@ -13,6 +13,7 @@ export default [
   ...prefix("recall", [
     index("features/recall/pages/recall-page.tsx"), // 날짜 선택
     route("/:date", "features/recall/pages/recall-detail-page.tsx"), // 날짜 회상 결과
+    route("/:date/summary", "features/recall/pages/recall-summary-page.tsx"), // 회상 요약 결과
   ]),
   route("/examples", "features/recall/pages/examples-page.tsx"),
   route("/share/:emotionDayId", "features/recall/pages/share-page.tsx"),
