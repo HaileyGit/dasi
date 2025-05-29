@@ -7,7 +7,7 @@ import {
 
 export default [
   // 홈
-  index("common/pages/home-page.tsx"),
+  index("features/home/pages/home-page.tsx"),
 
   // 회상 관련
   ...prefix("recall", [
@@ -31,16 +31,16 @@ export default [
   ]),
 
   // 서비스 소개
-  route("/about", "features/common/pages/about-page.tsx"),
+  route("/about", "features/about/pages/about-page.tsx"),
 
   // 메모리 관련
   ...prefix("memory", [
-    route("/explore/:date?", "features/memory/pages/explore-page.tsx"),
-    route("/edit/:date", "features/memory/pages/edit-memory-page.tsx"),
     route("/list", "features/memory/pages/memory-list-page.tsx"),
     route("/:id", "features/memory/pages/memory-detail-page.tsx"),
+    route("/edit/:date", "features/memory/pages/edit-memory-page.tsx"),
+    route("/:id/share", "features/memory/pages/share-memory-page.tsx"),
   ]),
 
   // 404
-  route("*", "common/pages/not-found-page.tsx"),
+  route("*", "features/common/pages/not-found-page.tsx"),
 ] satisfies RouteConfig;
