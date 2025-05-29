@@ -9,6 +9,7 @@ import {
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 import Navigation from "./common/components/navigation";
+import Footer from "./common/components/layouts/footer";
 import { Settings } from "luxon";
 
 export const links: Route.LinksFunction = () => [
@@ -54,6 +55,7 @@ export default function App() {
 
   return (
     <>
+      <Meta />
       <Navigation
         isLoggedIn={isLoggedIn}
         hasNotifications={hasNotifications}
@@ -62,6 +64,7 @@ export default function App() {
       <main className="pt-28 px-4 sm:px-8 lg:px-16">
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 }
