@@ -1,38 +1,24 @@
 import {
-  isRouteErrorResponse,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteError,
+  isRouteErrorResponse,
 } from "react-router";
-import type { Route } from "./+types/root";
-import stylesheet from "./app.css?url";
+import "./app.css";
 import Navigation from "./common/components/navigation";
 import Footer from "./common/components/layouts/footer";
 import { Settings } from "luxon";
 import CosmicBackgroundLayout from "./common/components/layouts/CosmicBackgroundLayout";
 
-export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  },
-  { rel: "stylesheet", href: stylesheet },
-];
-
-export function Layout({ children }: { children: React.ReactNode }) {
+export default function App() {
   Settings.defaultLocale = "ko";
   Settings.defaultZone = "Asia/Seoul";
 
   return (
-    <html lang="ko" className="">
+    <html lang="ko">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,7 +26,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="bg-[#0f0f1f] text-white">
-        {children}
+        <Navigation isLoggedIn={false} />
+        <main className="pt-28 px-4 sm:px-8 lg:px-16">
+          <CosmicBackgroundLayout>
+            <Outlet />
+          </CosmicBackgroundLayout>
+        </main>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -48,31 +40,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App() {
-  // TODO: 실제 전역 상태 (예: authStore)로 대체
-  const isLoggedIn = true;
-  const hasNotifications = false;
-  const hasMessages = false;
-
-  return (
-    <>
-      <Meta />
-      <Navigation
-        isLoggedIn={isLoggedIn}
-        hasNotifications={hasNotifications}
-        hasMessages={hasMessages}
-      />
-      <main className="pt-28 px-4 sm:px-8 lg:px-16">
-        <CosmicBackgroundLayout>
-          <Outlet />
-        </CosmicBackgroundLayout>
-      </main>
-      <Footer />
-    </>
-  );
-}
-
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+export function ErrorBoundary() {
+  const error = useRouteError();
   let message = "문제가 발생했습니다";
   let details = "예기치 못한 오류가 발생했습니다.";
   let stack: string | undefined;
